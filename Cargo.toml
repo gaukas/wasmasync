@@ -1,0 +1,11 @@
+
+[workspace]
+members = ["syncrs", "asyncrs", "asynctokio", "asynctokio2"]
+resolver="2"
+
+
+[workspace.package]
+authors = ["cerikccc@gmail.com", "gaukas", "jmwample", "ewust"]
+description = "Water WebAssembly Transport Executor for rust"
+edition = "2021"
+# documentation = "https://example.com/bar"
