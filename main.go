@@ -19,8 +19,6 @@ import (
 
 var wasmPath = flag.String("wasm", "", "path to the wasm file")
 
-var toSend []byte = []byte("good night umf\n")
-
 func main() {
 	flag.Parse()
 
