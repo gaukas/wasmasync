@@ -53,11 +53,10 @@ async fn tokio_worker(conn: std::net::TcpStream) -> std::io::Result<()> {
                     println!("Error writing to conn: {:?}", e);
                     return Err(e);
                 }
-                return Ok(());
             }
             Err(ref e) if e.kind() == std::io::ErrorKind::WouldBlock => {
-                println!("WouldBlock");
-                return Ok(());
+                // println!("WouldBlock");
+                continue;
             }
             Err(e) => {
                 return Err(e.into());
